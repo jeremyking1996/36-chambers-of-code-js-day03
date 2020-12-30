@@ -6,9 +6,21 @@ class Problem {
      * 
      * For example: if num is 4602225 your program should return the string false because 5 is not an even number.
      */
+    
+    // Step 1. Convert number to string
+    // Step 2. Split the string
+    // Step 3. Loop through the numbers with a for loop
+    // Step 4. Use a conditional statement to test if every number divisible by 2, return true or false
+    
+    
     simpleEvens(num) {
-        // code goes here  
-        return num;
+        let str = num.toString();
+        let splitStr = str.split("");
+        for(let i = 0; i < splitStr.length; i++){
+            if(splitStr[i] % 2 != 0)
+                return false;
+        }
+        return true;
     }
 
     /**
@@ -20,7 +32,13 @@ class Problem {
      * For example: if str is "arrb6???4xxbl5???eee5" then your program should return true because there are exactly 3 question marks between 6 and 4, 
      * and 3 question marks between 5 and 5 at the end of the string.
      */
+
+
     questionsMarks(str) {
+        let splitStr = str.split("");
+        let clean = splitStr.match(/[0-9?]/g);
+        clean = clean.join("");
+        
         // code goes here  
         return null;
     }
@@ -32,9 +50,18 @@ class Problem {
      * 
      * For example: if str is "BOB loves-coding" then your program should return the string bob_loves_coding.
      */
+    
+     // Step 1. Seperate string by using a split method as well as, non alphanumeric regEx
+    // Step 2. lowercase everything and seperate by underscore
+    // Step 3. Join new string with snake case
+    // Step 4. Return new string
     snakeCase(str) {
+        let strSplit = str.split(/[^A-Za-z]/);
+        let snakeCaseStr = strSplit.join("_");
+        let answer = snakeCaseStr.toLowerCase();
+        
         // code goes here  
-        return null;
+        return answer;
     }
 
     /**
@@ -44,9 +71,21 @@ class Problem {
      * For example: if arr is [45, 12] then your program should return 3. 
      * There will always be two elements in the array and they will be positive integers.
      */
+    // Step 1. Loop through array
+    // Step 2. Search for greatest common factor 
+    // Step 3. 
     gcf(arr) {
-        // code goes here  
-        return null;
+        let smallVal = 0;
+
+        arr[0] > arr[1] ? smallVal = arr[1] : smallVal = arr[0];
+
+        for(let i = smallVal; i < 0; i--){
+            if(arr[0] % == 0 && arr[1] % == 0){
+                // code goes here
+                return i;
+                break
+            }
+        }
       }
 
 

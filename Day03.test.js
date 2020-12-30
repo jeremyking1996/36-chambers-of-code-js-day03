@@ -37,7 +37,7 @@ test("QuestionsMarks test01", () => {
     let problem = new Problem();
     let expected = "cats_and_dogs_are_awesome";
 
-    let actual = problem.questionsMarks("cats AND*Dogs-are Awesome");
+    let actual = problem.snakeCase("cats AND*Dogs-are Awesome");
 
     expect(actual).toEqual(expected);
 });
